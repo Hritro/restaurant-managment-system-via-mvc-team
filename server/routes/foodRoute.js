@@ -4,9 +4,9 @@ const { verifyJwt } = require('../middlewares/verifyJwt')
 
 const router = express.Router()
 
-
-router.get('/top-foods', FoodController.getTopFood)
-
+router.put('/update-food', verifyJwt, FoodController.updateFood)
+router.get('/food/:id', FoodController.getById)
+router.get('/myfood/:email', verifyJwt, FoodController.getByMail)
 const foodRoutes = router
 module.exports = {foodRoutes}
 
