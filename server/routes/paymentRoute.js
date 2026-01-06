@@ -10,3 +10,9 @@ router.get('/user-payments', paymentsControllers.userPaymentsController)
 
 const paymentsRoute = router
 module.exports = {paymentsRoute}
+
+
+
+
+
+// sundor project
